@@ -1,0 +1,304 @@
+/* ==========================================================================
+   Image Gallery shortcode style - begin
+   ========================================================================== */
+
+.mkdf-image-gallery {
+	@include mkdfRelativeHolderLayout();
+	
+	&.mkdf-has-shadow {
+	
+		.mkdf-ig-image-inner {
+			box-shadow: $default-box-shadow;
+		}
+		
+		&.mkdf-ig-slider-type,
+		&.mkdf-ig-carousel-type {
+			
+			.owl-stage-outer {
+				padding: 20px 0 40px;
+    			margin: -20px 0;
+			}
+			
+			.mkdf-ig-image {
+				img {
+					box-shadow: $default-box-shadow;
+				}
+			}
+		}
+	}
+	
+	.mkdf-ig-image {
+		@include mkdfRelativeHolderLayout();
+		box-sizing: border-box;
+		
+		a, img {
+			position: relative;
+			display: block;
+		}
+	}
+	
+	.mkdf-ig-image-inner {
+		@include mkdfRelativeHolderLayout();
+	}
+	
+	.mkdf-ig-slider {
+		@include mkdfRelativeHolderLayout();
+	}
+	
+	/***** Image Gallery Grid Style - begin *****/
+	
+	.mkdf-ig-grid {
+		
+		.mkdf-ig-image {
+			float: left;
+		}
+		
+		$gallery_columns: ('two', 'three', 'four', 'five', 'six');
+		@for $i from 0 to length($gallery_columns) {
+			&.mkdf-ig-#{nth($gallery_columns, $i+1)}-columns {
+				$column_width: 100%/($i+2);
+				
+				.mkdf-ig-image {
+					width: $column_width;
+					
+					@media only screen and (min-width: $ipad-landscape-plus-pixel) {
+						
+						&:nth-child(#{$i+2}n+1) {
+							clear: both;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	/***** Image Gallery Grid Style - end *****/
+	
+	/***** Image Gallery Masonry Style - begin *****/
+	
+	.mkdf-ig-masonry {
+		opacity: 0;
+		@include mkdfTransition(opacity .2s ease-out);
+		
+		.mkdf-ig-grid-sizer {
+			width: 100%;
+		}
+		
+		.mkdf-ig-grid-gutter {
+			width: 0;
+		}
+
+		.mkdf-image-gallery-masonry-fixed{
+			overflow: hidden;
+		}
+
+		.mkdf-large-height-masonry-item{
+
+			.mkdf-ig-image-inner{
+				height: 100%;
+				overflow: hidden;
+
+				a{
+					height:	100%;
+				}
+			}
+
+			img{
+				max-width: initial;
+				height: 100%;
+				width: auto;
+			}
+		}
+		
+		$masonry_columns: ('two', 'three', 'four', 'five', 'six');
+		
+		@for $i from 0 to length($masonry_columns) {
+			&.mkdf-ig-#{nth($masonry_columns,$i+1)}-columns {
+				$column_width: 100%/($i+2);
+				
+				.mkdf-ig-image,
+				.mkdf-ig-grid-sizer {
+					width: $column_width;
+				}
+				
+				.mkdf-ig-image.mkdf-large-masonry-item,
+				.mkdf-ig-image.mkdf-large-width-masonry-item,
+				.mkdf-ig-image.mkdf-large-width-height-masonry-item{
+					width: $column_width * 2;
+				}
+			}
+		}
+	}
+	
+	/***** Image Gallery Masonry Style - end *****/
+	
+	/***** Lightbox Behavior Style - begin *****/
+	
+	&.mkdf-image-behavior-lightbox {
+		
+		.mkdf-ig-image {
+			
+			.mkdf-ig-lightbox-icon{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				color: #fff;
+				font-size: 50px;
+				opacity: 0;
+				@include mkdfTransform(translate(-50%,-50%));
+				@include mkdfDefaultTransition(opacity);
+				z-index: 10;
+			}
+
+			&:hover .mkdf-ig-lightbox-icon{
+				opacity: 1;
+			}
+		}
+	}
+	
+	/***** Lightbox Behavior Style - end *****/
+	
+	/***** Shader Hover Style - begin *****/
+	
+	&.mkdf-image-hover-shader {
+		
+		.mkdf-ig-image {
+			
+			a {
+				@include mkdfImageOverlayHoverStyle();
+				&:after {
+					background-color: rgba($first-main-color, 0.85);
+				}
+			}
+		}
+	}
+	
+	/***** Shader Hover Style - end *****/
+	
+	/***** Zoom Hover Style - begin *****/
+	
+	&.mkdf-image-hover-zoom {
+		
+		.mkdf-ig-image {
+			overflow: hidden;
+			-webkit-backface-visibility: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					@include mkdfTransform(scale(1.03) translateZ(0));
+				}
+			}
+			
+			.mkdf-ig-image-inner {
+				overflow: hidden;
+			}
+			
+			img {
+				@include mkdfTransform(scale(1) translateZ(0));
+				@include mkdfTransitionTransform($default-transition-duration $default-easing-function);
+			}
+		}
+	}
+	
+	/***** Zoom Hover Style - end *****/
+
+	/***** Zoom & Shader Hover Style - begin *****/
+	
+	&.mkdf-image-hover-zoom-shader {
+		
+		.mkdf-ig-image {
+			overflow: hidden;
+			-webkit-backface-visibility: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					@include mkdfTransform(scale(1.03) translateZ(0));
+				}
+			}
+			
+			.mkdf-ig-image-inner {
+				overflow: hidden;
+			}
+			
+			img {
+				@include mkdfTransform(scale(1) translateZ(0));
+				@include mkdfTransitionTransform($default-transition-duration $default-easing-function);
+			}
+
+			a {
+				@include mkdfImageOverlayHoverStyle();
+				&:after {
+					background-color: rgba($first-main-color, 0.85);
+				}
+			}
+		}
+	}
+	
+	/***** Zoom & Shader Hover Style - end *****/
+	
+	/***** Grayscale Hover Style - begin *****/
+	
+	&.mkdf-image-hover-grayscale {
+		
+		.mkdf-ig-image {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					-webkit-filter: grayscale(0);
+				}
+			}
+			
+			img {
+				filter: url('img/desaturate.svg#grayscale');
+				-webkit-filter: grayscale(100%);
+				-moz-filter: grayscale(100%);
+				filter: gray;
+				filter: grayscale(100%);
+				@include mkdfTransition(all .3s ease-in-out);
+			}
+		}
+	}
+
+	&.mkdf-image-scale-yes{
+		.mkdf-ig-slider{
+			.owl-item{
+				.mkdf-ig-image{
+					overflow: visible;
+					@include mkdfTransform(scale(0.9));
+					@include mkdfTransition(0.3s);
+
+					img {
+						border-radius: 10px;
+					}
+				}
+				&.active{
+					.mkdf-ig-image{
+						@include mkdfTransform(scale(1));
+					}
+				}
+			}
+
+		}
+	}
+	
+	/***** Grayscale Hover Style - end *****/
+}
+/* ==========================================================================
+   Image Gallery shortcode style - end
+   ========================================================================== */

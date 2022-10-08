@@ -1,0 +1,197 @@
+/* ==========================================================================
+   Tabs shortcode responsive style - begin
+   ========================================================================== */
+
+@include ipad-landscape {
+	
+	.mkdf-tabs {
+		
+		&.mkdf-tabs-standard {
+			
+			.mkdf-tabs-nav {
+				
+				li {
+					
+					a {
+						padding: 7px 21px;
+					}
+				}
+			}
+		}
+		
+		&.mkdf-tabs-boxed {
+			
+			.mkdf-tabs-nav {
+				
+				li {
+					
+					a {
+						padding: 7px 18px;
+					}
+				}
+			}
+		}
+		
+		&.mkdf-tabs-simple {
+			
+			.mkdf-tabs-nav {
+				
+				li {
+					margin: 0 26px 0 0;
+				}
+			}
+		}
+		
+		&.mkdf-tabs-vertical {
+			
+			.mkdf-tabs-nav {
+				width: 180px;
+			}
+			
+			.mkdf-tab-container {
+				width: calc(100% - 185px);
+			}
+		}
+	}
+}
+
+@include ipad-portrait {
+	
+	.mkdf-tabs {
+		
+		&.mkdf-tabs-standard {
+			
+			.mkdf-tabs-nav {
+				
+				li {
+					display: block;
+					float: none;
+					
+					a {
+						width: 100%;
+					}
+				}
+			}
+		}
+		
+		&.mkdf-tabs-boxed {
+			
+			.mkdf-tabs-nav {
+				
+				li {
+					display: block;
+					float: none;
+
+					&:first-child {
+						border-right: 1px solid $fourth-main-color;
+						border-bottom: 1px solid transparent;
+						border-top-right-radius: 5px;
+
+						&.ui-state-active{
+							border-bottom: 1px solid transparent;
+						}
+					}
+					&:last-child {
+						border-top-right-radius: 0;
+						border-left: 1px solid $fourth-main-color;
+						border-top: 1px solid transparent;
+					}
+
+					&.ui-state-active{
+						border-bottom: 1px solid $fourth-main-color;
+					}
+					
+					a {
+						width: 100%;
+					}
+				}
+			}
+
+			.ui-widget-content{
+				border-top-right-radius: 0;
+			}
+		}
+		
+		&.mkdf-tabs-simple {
+			
+			.mkdf-tabs-nav {
+				
+				li {
+					margin: 0 20px 0 0;
+				}
+			}
+		}
+		
+		&.mkdf-tabs-vertical {
+			
+			.mkdf-tabs-nav,
+			.mkdf-tab-container {
+				display: inline-block;
+				width: 100%;
+				height: auto;
+			}
+			
+			.mkdf-tabs-nav {
+				border-right: 0;
+				
+				li {
+					float: left;
+					margin: 0 20px 0 0;
+				}
+			}
+			
+			.mkdf-tab-container {
+				padding: 31px 0 0;
+			}
+		}
+	}
+}
+
+@include phone-landscape {
+	
+	.mkdf-tabs {
+
+		.mkdf-tab-container{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		
+		&.mkdf-tabs-simple {
+			
+			.mkdf-tabs-nav {
+				padding: 0 0 20px;
+				
+				li {
+					display: block;
+					float: none;
+					margin: 0 0 20px;
+					
+					a {
+						padding: 0;
+						width: 100%;
+					}
+				}
+			}
+		}
+		
+		&.mkdf-tabs-vertical {
+			
+			.mkdf-tabs-nav {
+				
+				li {
+					display: block;
+					float: none;
+					margin: 0 0 20px;
+					
+					a {
+						padding: 0;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Tabs shortcode responsive style - end
+   ========================================================================== */

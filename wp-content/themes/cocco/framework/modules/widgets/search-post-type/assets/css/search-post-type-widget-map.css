@@ -1,0 +1,99 @@
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+@-webkit-keyframes mkdfborderdance {
+  0% {
+    background-position: 0% 0px, 100% 100%, 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+@keyframes mkdfborderdance {
+  0% {
+    background-position: 0% 0px, 100% 100%, 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+.widget.mkdf-search-post-type-widget {
+  line-height: 0;
+  position: relative;
+}
+
+.widget.mkdf-search-post-type-widget .mkdf-search-post-type {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+
+.widget.mkdf-search-post-type-widget .mkdf-post-type-search-results {
+  background: #fff;
+  height: auto;
+  display: none;
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  top: 100%;
+}
+
+.widget.mkdf-search-post-type-widget .mkdf-post-type-search-results ul {
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: inline-block;
+  line-height: 0;
+  width: 100%;
+}
+
+.widget.mkdf-search-post-type-widget .mkdf-post-type-search-results ul li {
+  display: inline-block;
+  width: 100%;
+}
+
+.widget.mkdf-search-post-type-widget .mkdf-search-icon,
+.widget.mkdf-search-post-type-widget .mkdf-search-loading {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -9px;
+  font-size: 18px;
+  color: #000000;
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+  opacity: 1;
+}
+
+.widget.mkdf-search-post-type-widget .mkdf-search-icon.mkdf-hidden,
+.widget.mkdf-search-post-type-widget .mkdf-search-loading.mkdf-hidden {
+  opacity: 0;
+}
+
+.wpb_widgetised_column .widget.mkdf-search-post-type-widget .mkdf-search-post-type {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.wpb_widgetised_column .widget.mkdf-search-post-type-widget .mkdf-post-type-search-field {
+  border-radius: 0;
+  height: 57px;
+  line-height: calc(57px - 2px);
+  border: 0;
+  font-size: 15px;
+  color: #878787;
+}
+
+.wpb_widgetised_column .widget.mkdf-search-post-type-widget .mkdf-post-type-search-results {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid #dadada;
+}
+
+.wpb_widgetised_column .widget.mkdf-search-post-type-widget .mkdf-post-type-search-results ul {
+  padding: 16px 20px;
+}
+
+/*# sourceMappingURL=search-post-type-widget-map.css.map */

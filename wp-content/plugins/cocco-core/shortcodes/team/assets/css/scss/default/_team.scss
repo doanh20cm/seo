@@ -1,0 +1,145 @@
+/* ==========================================================================
+   Team shortcode style - begin
+   ========================================================================== */
+
+.mkdf-team-holder {
+    @include mkdfRelativeHolderLayout();
+	
+	&.mkdf-team-info-on-image {
+		.touch & {
+			cursor: pointer;
+		}
+
+		&:hover {
+			
+			.mkdf-team-social-wrapper {
+				opacity: 1;
+			}
+
+			.mkdf-team-social-inner {
+				@include mkdfTransitionTransform(.45s cubic-bezier(0.64, 0.01, 0.15, 1.16), opacity .5s);
+				@include mkdfTransform(translate3d(0,0,0));
+				text-align: center;
+			}
+		}
+		.mkdf-team-social-holder {
+			margin: 7px 0 0;
+		}
+
+		.mkdf-team-text{
+			color: $default-heading-color;
+		}
+	}
+
+    .mkdf-team-image {
+        @include mkdfRelativeHolderLayout();
+
+        img {
+            display: block;
+			margin: 0 auto;
+			border-radius: 5px;
+        }
+    }
+
+	.mkdf-team-title-holder{
+		text-align: center;
+	}
+
+	.mkdf-team-info {
+		@include mkdfRelativeHolderLayout();
+		box-sizing: border-box;
+		margin: 35px 0 0;
+		text-align: center;
+
+		.mkdf-team-text{
+			padding: 0 25px 12px;
+		}
+	}
+
+    .mkdf-team-name {
+        margin: 0;
+    }
+
+    .mkdf-team-position {
+		position: absolute;
+		bottom: -15px;
+		left: 50%;
+		@include mkdfTransform(translateX(-50%));
+		display: inline-block;
+		background-color: $first-main-color;
+		color: #FFF;
+		padding: 0px 17px 3px;
+		border-radius: 8px;
+		white-space: nowrap;
+    }
+	
+	.mkdf-team-social-wrapper {
+		@include mkdfAbsoluteHolderLayout();
+		background-color: rgba(#fff, .85);
+		text-align: center;
+		opacity: 0;
+		@include mkdfTransform(translateZ(0));
+		@include mkdfTransition(opacity .3s);
+		z-index: 1;
+	}
+	
+	.mkdf-team-social-outer {
+		@include mkdfTableLayout();
+	}
+	
+	.mkdf-team-social-inner {
+		position: relative;
+		display: table-cell;
+		height: 100%;
+		width: 100%;
+		padding: 20px 40px 0px;
+		vertical-align: middle;
+		@include mkdfTransitionTransform(.2s ease);
+		@include mkdfTransform(translate3d(0,40px,0));
+	}
+	
+	.mkdf-team-social-holder {
+		@include mkdfRelativeHolderLayout();
+		margin: 0;
+		
+		.mkdf-team-icon {
+			margin: 0 10px 0 0;
+			text-align: center;
+			box-sizing: border-box;
+
+			&:last-child{
+				margin-right: 0;
+			}
+
+			.mkdf-icon-shortcode.mkdf-circle{
+				&:after{
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: rgba(0,0,0,.1);
+					border-radius: 50%;
+					opacity: 0;
+					@include mkdfDefaultTransition(opacity);
+				}
+
+				&:hover{
+					&:after{
+						opacity: 1;
+					}
+				}
+
+			}
+
+			.mkdf-icon-element {
+				font-size: 12px;
+				@include mkdfTransition(none);
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Team shortcode style - end
+   ========================================================================== */

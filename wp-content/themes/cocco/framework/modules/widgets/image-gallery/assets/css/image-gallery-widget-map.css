@@ -1,0 +1,52 @@
+/* ==========================================================================
+   Image Slider widget style - begin
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+@-webkit-keyframes mkdfborderdance {
+  0% {
+    background-position: 0% 0px, 100% 100%, 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+@keyframes mkdfborderdance {
+  0% {
+    background-position: 0% 0px, 100% 100%, 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+.widget.mkdf-image-gallery-widget {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.widget.mkdf-image-gallery-widget .mkdf-is-widget-inner {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.widget.mkdf-image-gallery-widget .mkdf-widget-title {
+  margin: 0 0 32px;
+}
+
+.widget.mkdf-image-gallery-widget img {
+  display: block;
+}
+
+/* ==========================================================================
+   Image Slider widget style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=image-gallery-widget-map.css.map */

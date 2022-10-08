@@ -1,0 +1,63 @@
+/* ==========================================================================
+   Icon List Item shortcode style - begin
+   ========================================================================== */
+
+.mkdf-icon-list-holder {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    height: auto;
+    width: 100%;
+    margin-bottom: 12px;
+	
+	.mkdf-il-icon-holder,
+	.mkdf-il-text {
+		position: relative;
+		display: table-cell;
+		vertical-align: top;
+	}
+
+    .mkdf-il-icon-holder {
+	    width: 30px;
+	    
+	    > * {
+		    position: relative;
+		    display: inline-block;
+		    vertical-align: middle;
+		    color: $default-heading-color;
+		    font-size: 17px;
+		    line-height: inherit;
+		
+		    &:before {
+			    display: block;
+			    line-height: inherit;
+		    }
+	    }
+    }
+
+    .mkdf-il-text {
+	    width: 95%;
+	    padding: 0 0 0 13px;
+	    box-sizing: border-box;
+    }
+	.mkdf-il-link{
+		display: inline-block;
+		color: $default-text-color;
+
+		&:hover{
+			color: $first-main-color;
+		}
+	}
+
+	&.mkdf-icon-list-appear {
+		opacity:0;
+		@include mkdfTransition(opacity .7s ease-out);
+
+		&.mkdf-appeared {
+			opacity:1;
+		}
+	}
+}
+/* ==========================================================================
+   Icon List Item shortcode style - end
+   ========================================================================== */

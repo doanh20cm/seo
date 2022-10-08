@@ -1,0 +1,264 @@
+/* ==========================================================================
+   Banner shortcode style - begin
+   ========================================================================== */
+
+.mkdf-banner-holder {
+    @include mkdfRelativeHolderLayout();
+    border-radius: 5px;
+	
+	.touch & {
+		cursor: pointer;
+	}
+	
+	&.mkdf-visible-on-hover {
+		
+		&:hover {
+
+			.mkdf-banner-border {
+				opacity: 1;
+			}
+		}
+
+		.mkdf-banner-border {
+			opacity: 0;
+			background-color: rgba($default-heading-color, .4);
+			@include mkdfDefaultTransition(opacity);
+		}
+	}
+
+	&.mkdf-visible-on-default {
+
+		&.mkdf-banner-hover-shader{
+
+			.mkdf-banner-text-holder{
+				&:after{
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: rgba($default-heading-color, .4);
+					opacity: 0;
+					@include mkdfDefaultTransition(opacity);
+				}
+			}
+
+			&:hover {
+				.mkdf-banner-text-holder:after{
+					opacity: 1;
+				}
+			}
+		}
+
+		&.mkdf-banner-hover-zoom{
+			overflow: hidden;
+
+			.mkdf-banner-image{
+				@include mkdfTransform(scale(1));
+				@include mkdfTransitionTransform($default-transition-duration $default-easing-function);
+			}
+
+			&:hover {
+				.mkdf-banner-image{
+					@include mkdfTransform(scale(1.06) translateZ(0));
+				}
+			}
+		}
+		
+		&.mkdf-banner-hover-zoom-shader{
+			overflow: hidden;
+
+			.mkdf-banner-image{
+				@include mkdfTransform(scale(1));
+				@include mkdfTransitionTransform($default-transition-duration $default-easing-function);
+			}
+
+			.mkdf-banner-text-holder{
+				&:after{
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: rgba($default-heading-color, .4);
+					opacity: 0;
+					@include mkdfDefaultTransition(opacity);
+				}
+			}
+
+			&:hover {
+				.mkdf-banner-image{
+					@include mkdfTransform(scale(1.03) translateZ(0));
+				}
+				.mkdf-banner-text-holder:after{
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&.mkdf-banner-info-has-border{
+
+		.mkdf-banner-text-holder{
+			border: 2px dashed #7c8fa4;
+			border-color: rgba(255, 255, 255, 0.3);
+		}
+	}
+
+
+	.mkdf-banner-border {
+	    width: 100%;
+	    height: 100%;
+	    position: absolute;
+	    display: block;
+	    top: 0;
+	    left: 0;
+	    padding: 2%;
+	    box-sizing: border-box;
+	    right: 0;
+
+	}
+	&.mkdf-disabled {
+		
+		.mkdf-banner-text-holder {
+			display: none;
+		}
+	}
+	
+	&.mkdf-banner-info-centered {
+		
+		.mkdf-banner-text-holder {
+			padding: 70px 20px;
+			text-align: center;
+		}
+	}
+	
+	.mkdf-banner-image {
+		@include mkdfRelativeHolderLayout();
+		
+		img {
+			display: block;
+		}
+	}
+
+	.mkdf-banner-text-holder {
+	    display: block;
+	    width: 100%;
+	    height: 100%;
+	    top: 0;
+	    left: 0;
+		padding: 20px;
+	    border-radius: 5px;
+		box-sizing: border-box;
+		
+		@include ipad-portrait {
+			padding: 25px;
+		}
+	}
+	
+	.mkdf-banner-text-outer {
+		@include mkdfTableLayout();
+	}
+	
+	.mkdf-banner-text-inner {
+		position: relative;
+		display: table-cell;
+		height: 100%;
+		width: 100%;
+		vertical-align: bottom;
+	}
+	
+	.mkdf-banner-subtitle {
+		font-family: $default-text-font;
+		font-size: 15px;
+		line-height: 1.7em;
+		position: relative;
+		color: #fff;
+		margin: 0 0 4px;
+		z-index: 10;
+	}
+	
+	.mkdf-banner-title {
+		position: relative;
+		color: #fff;
+		margin: 0 0 14px 0;
+		z-index: 10;
+		
+		.mkdf-banner-title-light {
+			font-weight: 300;
+		}
+	}
+	
+	.mkdf-banner-link-text {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		margin: 11px 0 0;
+		color: #fff;
+		line-height: 1em;
+		z-index: 2;
+		@include mkdfTransform(translateZ(0));
+		
+		&:hover {
+			
+			.mkdf-banner-link-hover {
+				width: 100%;
+			}
+		}
+		
+		.mkdf-banner-link-original {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			width: 100%;
+			
+			span {
+				color: inherit;
+			}
+		}
+		
+		.mkdf-banner-link-hover {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0.1%;
+			height: 100%;
+			display: inline-block;
+			vertical-align: top;
+			white-space: nowrap;
+			overflow: hidden;
+			@include mkdfTransition(width .4s ease-in-out);
+			
+			span {
+				color: $first-main-color;
+			}
+		}
+		
+		.mkdf-banner-link-icon,
+		.mkdf-banner-link-label {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+		}
+		
+		.mkdf-banner-link-icon {
+			margin: 0 2px 0 0;
+			font-size: 15px;
+		}
+		
+		.mkdf-banner-link-label {
+			font-size: 14px;
+			line-height: inherit;
+		}
+	}
+
+	.mkdf-banner-link {
+		@include mkdfAbsoluteHolderLayout();
+		z-index: 10;
+	}
+}
+/* ==========================================================================
+   Banner shortcode style - end
+   ========================================================================== */

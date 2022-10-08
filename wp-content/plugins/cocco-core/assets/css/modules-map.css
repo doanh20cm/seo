@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+@-webkit-keyframes mkdfborderdance {
+  0% {
+    background-position: 0% 0px, 100% 100%, 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+@keyframes mkdfborderdance {
+  0% {
+    background-position: 0% 0px, 100% 100%, 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+/* ==========================================================================
+   Custom Post Types styles
+   ========================================================================== */
+
+/*# sourceMappingURL=../../../../plugins/cocco-core/assets/css/modules-map.css.map */

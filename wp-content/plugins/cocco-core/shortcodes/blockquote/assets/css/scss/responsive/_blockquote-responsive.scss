@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Blockquote shortcode responsive style - begin
+   ========================================================================== */
+
+@media only screen and (max-width: $phone-landscape) {
+	.mkdf-blockquote-shortcode{
+		.mkdf-icon-quotations-holder{
+			svg{
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Blockquote shortcode responsive style - end
+   ========================================================================== */

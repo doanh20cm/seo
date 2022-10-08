@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+@-webkit-keyframes mkdfborderdance {
+  0% {
+    background-position: 0% 0px, 100% 100%, 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+@keyframes mkdfborderdance {
+  0% {
+    background-position: 0% 0px, 100% 100%, 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+/* ==========================================================================
+   Custom Post Types responsive styles
+   ========================================================================== */
+/* ==========================================================================
+   Testimonials boxed style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1366px) {
+  .mkdf-testimonials-holder.mkdf-testimonials-boxed .owl-item .mkdf-testimonial-text {
+    padding: 30px 25px;
+  }
+}
+
+/* ==========================================================================
+   Testimonials boxed style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../../../../plugins/cocco-core/assets/css/custom-post-types-map-responsive.css.map */

@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Sticky Sidebar widget start styles
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+@-webkit-keyframes mkdfborderdance {
+  0% {
+    background-position: 0% 0px, 100% 100%, 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+@keyframes mkdfborderdance {
+  0% {
+    background-position: 0% 0px, 100% 100%, 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+.mkdf-widget-sticky-sidebar {
+  position: relative;
+  width: 100%;
+  height: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+/* ==========================================================================
+   Sticky Sidebar widget end styles
+   ========================================================================== */
+
+/*# sourceMappingURL=sticky-sidebar-widget-map.css.map */

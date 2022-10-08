@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Header responsive styles - begin
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+@-webkit-keyframes mkdfborderdance {
+  0% {
+    background-position: 0% 0px, 100% 100%, 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+@keyframes mkdfborderdance {
+  0% {
+    background-position: 0% 0px, 100% 100%, 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+/* ==========================================================================
+# Pop-up style responsive - begin
+========================================================================== */
+@media only screen and (max-width: 1280px) {
+  .mkdf-popup-holder .mkdf-popup-inner {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .mkdf-popup-holder .mkdf-popup-inner {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mkdf-popup-holder .mkdf-popup-inner {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .mkdf-popup-holder .mkdf-popup-inner {
+    min-height: 450px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .mkdf-popup-holder .mkdf-popup-content-container {
+    width: 100%;
+    padding: 0 40px;
+    border-radius: 15px;
+  }
+  .mkdf-popup-holder .mkdf-popup-content-container .wpcf7 .mkdf-two-columns-form-without-space {
+    display: table;
+  }
+  .mkdf-popup-holder .mkdf-popup-content-container .wpcf7 .mkdf-two-columns-form-without-space .mkdf-column-left {
+    display: table-cell;
+    width: 99%;
+    vertical-align: top;
+  }
+  .mkdf-popup-holder .mkdf-popup-content-container .wpcf7 .mkdf-two-columns-form-without-space .mkdf-column-right {
+    display: table-cell;
+    width: 1%;
+    text-align: left;
+    vertical-align: top;
+  }
+  .mkdf-popup-holder .mkdf-popup-background {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .mkdf-popup-holder .mkdf-popup-title-holder .mkdf-popup-title {
+    font-size: 25px;
+  }
+}
+
+/* ==========================================================================
+# Pop-up style responsive - end
+========================================================================== */
+/* ==========================================================================
+   Header responsive styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=popup-map-responsive.css.map */

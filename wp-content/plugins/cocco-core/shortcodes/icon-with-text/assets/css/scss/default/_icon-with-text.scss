@@ -1,0 +1,188 @@
+/* ==========================================================================
+   Icon With Text shortcode style - begin
+   ========================================================================== */
+
+.mkdf-iwt {
+	@include mkdfRelativeHolderLayout();
+	
+	.mkdf-iwt-icon {
+		
+		a {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+
+			&:hover .mkdf-icon-bckg-holder{
+				animation: scale-in-out 0.3s linear;
+			}
+		}
+		
+		.mkdf-icon-shortcode {
+			line-height: 1;
+			
+			&.mkdf-circle,
+			&.mkdf-square {
+				line-height: 2;
+			}
+		}
+
+		.mkdf-iwt-custom-icon{
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+
+			.mkdf-iwt-hover-icon{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			img{
+				vertical-align: middle;
+			}
+		}
+	}
+	
+	.mkdf-iwt-title {
+		margin: 0;
+		a {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+	
+	.mkdf-iwt-title-text {
+		display: block;
+	}
+
+	.mkdf-iwt-text {
+		margin: 15px 0 0;
+	}
+	
+	&.mkdf-iwt-icon-left {
+		width: auto;
+		
+		.mkdf-iwt-icon,
+		.mkdf-iwt-content {
+			display: table-cell;
+			vertical-align: top;
+		}
+		
+		.mkdf-iwt-icon {
+			position: relative;
+			top: 1px;
+			
+			img {
+				max-width: none;
+			}
+		}
+		
+		.mkdf-iwt-content {
+			padding: 0 0 0 13px;
+		}
+	}
+	
+	&.mkdf-iwt-icon-left-from-title {
+		
+		.mkdf-iwt-icon,
+		.mkdf-iwt-title-text {
+			position: relative;
+			display: table-cell;
+			vertical-align: middle;
+		}
+		
+		.mkdf-iwt-icon {
+			
+			img {
+				max-width: none;
+			}
+		}
+		
+		.mkdf-iwt-title-text {
+			padding: 0 0 0 17px;
+		}
+	}
+	
+	&.mkdf-iwt-icon-top {
+		text-align: center;
+		
+		.mkdf-iwt-content {
+			padding: 41px 0 0;
+		}
+	}
+
+	&.mkdf-iwt-has-hover-icon{
+		.mkdf-iwt-custom-icon{
+			img{
+				opacity: 1;
+				@include mkdfDefaultTransition(opacity);
+			}
+
+			.mkdf-iwt-hover-icon img{
+				opacity: 0;
+				@include mkdfDefaultTransition(opacity);
+			}
+
+			&:hover{
+				img{
+					opacity: 0;
+				}
+
+				.mkdf-iwt-hover-icon img{
+					opacity: 1;
+				}				
+			}
+		}
+	}
+
+	&.mkdf-custom-icon-animated{
+		.mkdf-iwt-custom-icon{
+			@include mkdfTransform(scale(0));
+			@include mkdfTransition(transform 0.15s ease-in-out);
+
+			&.mkdf-icon-animation-show {
+				@include mkdfTransform(scale(1));
+			}
+		}
+	}
+
+	&.mkdf-custom-icon-mkdf-circle,
+	&.mkdf-custom-icon-mkdf-square{
+		.mkdf-iwt-custom-icon {
+			.mkdf-iwt-custom-icon-shape {
+				width: 100px;
+				height: 100px;
+				background-color: $first-main-color;
+			}
+
+			img{
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				@include mkdfTransform(translate(8%, 8%));
+			}
+		}
+
+		.mkdf-iwt-icon a:hover{
+			.mkdf-iwt-custom-icon {
+				.mkdf-iwt-custom-icon-shape {
+					animation: scale-in-out 0.3s linear;
+				}
+			}
+		}
+	}
+
+	&.mkdf-custom-icon-mkdf-circle{
+		.mkdf-iwt-custom-icon{
+			.mkdf-iwt-custom-icon-shape {
+				border-radius: 50%;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Icon With Text shortcode style - end
+   ========================================================================== */

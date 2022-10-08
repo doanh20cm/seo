@@ -1,0 +1,130 @@
+/* ==========================================================================
+   Icon shortcode style - begin
+   ========================================================================== */
+
+.mkdf-icon-shortcode {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+	line-height: 1.1em;
+	
+    &.mkdf-circle,
+    &.mkdf-square {
+        width: 2em;
+        height: 2em;
+        line-height: 2em;
+        text-align: center;
+
+        .mkdf-icon-bckg-holder{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: $first-main-color;
+			@include mkdfDefaultTransition(background-color, border-color);
+        }
+
+        a {
+	        position: relative;
+	        display: inline-block;
+	        vertical-align: top;
+	        width: 100%;
+	        height: 100%;
+	        z-index: 10;
+			-webkit-transform: translateZ(0);
+        }
+
+        .mkdf-icon-element {
+        	position: relative;
+            color: #fff;
+            line-height: inherit;
+            z-index: 5;
+        }
+    }
+
+    &.mkdf-circle {
+        border-radius: 50%;
+
+        .mkdf-icon-bckg-holder{
+        	border-radius: 50%;
+        }
+    }
+
+    .mkdf-icon-element {
+	    display: block;
+	    line-height: inherit;
+        @include mkdfDefaultTransition(color);
+	    
+	    &:before {
+		    display: block;
+		    line-height: inherit;
+	    }
+    }
+
+    &.mkdf-icon-switch{
+    	overflow: hidden;
+
+		.mkdf-icon-original{
+			@include mkdfTransform(translateY(0));
+			@include mkdfTransitionTransform($default-transition-duration $default-easing-function);
+		}
+    	.mkdf-icon-duplicate{
+    		position: absolute;
+    		top: 100%;
+    		left: 0;
+    		width: 100%;
+    		height: 100%;
+    		@include mkdfTransform(translateY(0));
+    		@include mkdfTransitionTransform($default-transition-duration $default-easing-function);
+    	}
+
+    	&:hover{
+
+    		.mkdf-icon-original{
+    			@include mkdfTransform(translateY(-100%));
+    		}
+
+    		.mkdf-icon-duplicate{
+    			@include mkdfTransform(translateY(-100%));
+    		}
+    	}
+    }
+}
+
+.mkdf-icon-animation-holder {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+    @include mkdfTransform(scale(0));
+    @include mkdfTransition(transform 0.15s ease-in-out);
+
+    &.mkdf-icon-animation-show {
+        @include mkdfTransform(scale(1));
+    }
+}
+
+.mkdf-icon-tiny {
+    font-size: 1.33333333em;
+    line-height: .75em;
+    vertical-align: -15%;
+}
+
+.mkdf-icon-small {
+    font-size: 2em;
+}
+
+.mkdf-icon-medium {
+    font-size: 3em;
+}
+
+.mkdf-icon-large {
+    font-size: 4em;;
+}
+
+.mkdf-icon-huge {
+    font-size: 5em;
+}
+/* ==========================================================================
+   Icon shortcode style - end
+   ========================================================================== */

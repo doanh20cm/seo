@@ -1,0 +1,10 @@
+.mkdf-banner-holder {
+	@include phone-landscape {
+		.mkdf-banner-subtitle {
+			display: none;
+		}
+	}
+}
+/* ==========================================================================
+   Banner shortcode style - end
+   ========================================================================== */

@@ -1,0 +1,302 @@
+/* ==========================================================================
+   Title styles - begin
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+@-webkit-keyframes mkdfborderdance {
+  0% {
+    background-position: 0% 0px, 100% 100%, 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+@keyframes mkdfborderdance {
+  0% {
+    background-position: 0% 0px, 100% 100%, 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+/* ==========================================================================
+   Title style - begin
+   ========================================================================== */
+.mkdf-title-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  height: 110px;
+  background-color: #f6f6f6;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  z-index: 101;
+}
+
+.mkdf-title-holder.mkdf-title-full-width .mkdf-grid {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.mkdf-title-holder.mkdf-bg-responsive {
+  height: auto !important;
+}
+
+.mkdf-title-holder.mkdf-bg-responsive .mkdf-title-image {
+  display: block;
+}
+
+.mkdf-title-holder.mkdf-bg-responsive .mkdf-title-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.mkdf-title-holder.mkdf-bg-parallax {
+  background-attachment: fixed;
+  backface-visibility: hidden;
+}
+
+.mkdf-title-holder .mkdf-title-image {
+  display: none;
+}
+
+.mkdf-title-holder .mkdf-title-image img {
+  display: block;
+  width: 100%;
+}
+
+.mkdf-title-holder .mkdf-title-wrapper {
+  position: relative;
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.mkdf-title-holder .mkdf-title-inner {
+  position: relative;
+  display: table-cell;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.mkdf-title-holder.mkdf-title-content-va-top .mkdf-title-inner {
+  vertical-align: top;
+}
+
+.mkdf-title-holder.mkdf-title-content-va-middle .mkdf-title-inner {
+  vertical-align: middle;
+}
+
+.mkdf-title-holder.mkdf-title-content-va-bottom .mkdf-title-inner {
+  vertical-align: bottom;
+}
+
+/* ==========================================================================
+   Title style - end
+   ========================================================================== */
+/* ==========================================================================
+   Breadcrumbs Title type style - begin
+   ========================================================================== */
+.mkdf-title-holder.mkdf-breadcrumbs-type .mkdf-breadcrumbs {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  font-size: 16px;
+  color: #8f9093;
+}
+
+.mkdf-title-holder.mkdf-breadcrumbs-type .mkdf-breadcrumbs .mkdf-current {
+  color: #ff6f96;
+}
+
+.mkdf-title-holder.mkdf-breadcrumbs-type .mkdf-breadcrumbs.mkdf-has-inline-style a {
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+.mkdf-title-holder.mkdf-breadcrumbs-type .mkdf-breadcrumbs.mkdf-has-inline-style a:hover {
+  color: inherit;
+  opacity: 0.9;
+}
+
+.mkdf-title-holder.mkdf-breadcrumbs-type .mkdf-breadcrumbs a,
+.mkdf-title-holder.mkdf-breadcrumbs-type .mkdf-breadcrumbs span {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: inherit;
+}
+
+.mkdf-title-holder.mkdf-breadcrumbs-type .mkdf-breadcrumbs a:hover {
+  color: #ff6f96;
+}
+
+.mkdf-title-holder.mkdf-breadcrumbs-type .mkdf-breadcrumbs-holder {
+  display: inline-block;
+  position: relative;
+  padding: 9px 12px;
+}
+
+/* ==========================================================================
+   Breadcrumbs Title type style - end
+   ========================================================================== */
+/* ==========================================================================
+   Centered Title type style - begin
+   ========================================================================== */
+.mkdf-title-holder.mkdf-centered-type .mkdf-title-inner {
+  text-align: center;
+}
+
+.mkdf-title-holder.mkdf-centered-type .mkdf-title-inner .mkdf-title-info {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.mkdf-title-holder.mkdf-centered-type .mkdf-title-inner .mkdf-title-info .mkdf-title-info-holder {
+  display: inline-block;
+  position: relative;
+  background-color: #d7f5fa;
+  padding: 2px 12px;
+}
+
+.mkdf-title-holder.mkdf-centered-type .mkdf-title-inner .mkdf-title-info .mkdf-page-title {
+  margin: 0;
+}
+
+.mkdf-title-holder.mkdf-centered-type .mkdf-page-subtitle {
+  display: block;
+  margin: 10px 0 0;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Centered Title type style - end
+   ========================================================================== */
+/* ==========================================================================
+   Standard With Breadcrumbs Title type style - begin
+   ========================================================================== */
+.mkdf-title-holder.mkdf-standard-with-breadcrumbs-type .mkdf-title-info,
+.mkdf-title-holder.mkdf-standard-with-breadcrumbs-type .mkdf-breadcrumbs-info {
+  display: block;
+  vertical-align: middle;
+}
+
+.mkdf-title-holder.mkdf-standard-with-breadcrumbs-type .mkdf-title-info {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.mkdf-title-holder.mkdf-standard-with-breadcrumbs-type .mkdf-title-info .mkdf-title-info-holder {
+  display: inline-block;
+  position: relative;
+  background-color: #d7f5fa;
+  padding: 2px 12px;
+}
+
+.mkdf-title-holder.mkdf-standard-with-breadcrumbs-type .mkdf-breadcrumbs-info {
+  width: 100%;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.mkdf-title-holder.mkdf-standard-with-breadcrumbs-type .mkdf-breadcrumbs-info .mkdf-breadcrumbs-holder {
+  display: inline-block;
+  position: relative;
+  padding: 9px 12px;
+}
+
+.mkdf-title-holder.mkdf-standard-with-breadcrumbs-type .mkdf-page-title {
+  margin: 0;
+}
+
+.mkdf-title-holder.mkdf-standard-with-breadcrumbs-type .mkdf-page-subtitle {
+  margin: 5px 0 0;
+}
+
+.mkdf-title-holder.mkdf-standard-with-breadcrumbs-type .mkdf-breadcrumbs {
+  font-size: 16px;
+  color: #8f9093;
+}
+
+.mkdf-title-holder.mkdf-standard-with-breadcrumbs-type .mkdf-breadcrumbs .mkdf-current {
+  color: #ff6f96;
+}
+
+.mkdf-title-holder.mkdf-standard-with-breadcrumbs-type .mkdf-breadcrumbs.mkdf-has-inline-style a {
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+.mkdf-title-holder.mkdf-standard-with-breadcrumbs-type .mkdf-breadcrumbs.mkdf-has-inline-style a:hover {
+  color: inherit;
+  opacity: 0.9;
+}
+
+.mkdf-title-holder.mkdf-standard-with-breadcrumbs-type .mkdf-breadcrumbs a,
+.mkdf-title-holder.mkdf-standard-with-breadcrumbs-type .mkdf-breadcrumbs span {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: inherit;
+}
+
+.mkdf-title-holder.mkdf-standard-with-breadcrumbs-type .mkdf-breadcrumbs a:hover {
+  color: #ff6f96;
+}
+
+/* ==========================================================================
+   Standard With Breadcrumbs Title type style - end
+   ========================================================================== */
+/* ==========================================================================
+   Standard Title type style - begin
+   ========================================================================== */
+.mkdf-title-holder.mkdf-standard-type .mkdf-title-info {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.mkdf-title-holder.mkdf-standard-type .mkdf-title-info .mkdf-title-info-holder {
+  display: inline-block;
+  position: relative;
+  background-color: #d7f5fa;
+  padding: 2px 12px;
+}
+
+.mkdf-title-holder.mkdf-standard-type .mkdf-title-info .mkdf-page-title {
+  margin: 0;
+}
+
+.mkdf-title-holder.mkdf-standard-type .mkdf-page-subtitle {
+  margin: 10px 0 0;
+}
+
+/* ==========================================================================
+   Standard Title type style - end
+   ========================================================================== */
+/* ==========================================================================
+   Title styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=title-map.css.map */

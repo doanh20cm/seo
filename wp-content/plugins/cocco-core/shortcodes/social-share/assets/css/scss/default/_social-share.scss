@@ -1,0 +1,336 @@
+/* ==========================================================================
+   Social Share shortcode style - begin
+   ========================================================================== */
+
+.mkdf-social-share-holder {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+
+    ul {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+/* List type - begin
+========================================================================== */
+.mkdf-social-share-holder.mkdf-list {
+
+    .mkdf-social-title {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+        color: $default-heading-color;
+    }
+
+    li {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        padding: 0;
+        margin: 0 10px 3px 0;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        text-align: center;
+        box-sizing: border-box;
+
+        span {
+            height:28px;
+            position: relative;
+            display: block;
+            height: 100%;
+            @include mkdfTransitionTransform(.25s ease-out);
+            @include mkdfTransform(translate3d(0,8px,0));
+
+            &:after {
+                line-height:28px;
+                @include mkdfTransitionTransform(.25s ease-out);
+                @include mkdfTransform(translate3d(0,100%,0));
+                @include mkdfAbsoluteHolderLayout();
+            }
+
+            &:hover {
+                @include mkdfTransform(translate3d(0,-28px,0));
+            }
+        }
+
+        &.mkdf-facebook-share {
+            background-color: #3b5998;
+            color: #fff;
+
+            span {
+
+                &:after {
+                    content: "\e093";
+                }
+            }
+        }
+
+        &.mkdf-twitter-share {
+            background-color: #00aced;
+            color: #fff;
+
+            span {
+                &:after {
+                    content: "\e094";
+                }
+            }
+        }
+
+        &.mkdf-google_plus-share {
+            background-color: #dd4b39;
+            color: #fff;
+
+            span {
+                &:after {
+                    content: "\e096";
+                }
+            }
+        }
+
+        &.mkdf-linkedin-share {
+            background-color: #007bb5;
+            color: #fff;
+
+            span {
+                &:after {
+                    content: "\e09d";
+                }
+            }
+        }
+
+        &.mkdf-tumblr-share {
+            background-color: #32506d;
+            color: #fff;
+
+            span {
+                &:after {
+                    content: "\e097";
+                }
+            }
+        }
+
+        &.mkdf-pinterest-share {
+            background-color: #cb2027;
+            color: #fff;
+
+            span {
+                &:after {
+                    content: "\e095";
+                    line-height:28px;
+                    @include mkdfAbsoluteHolderLayout();
+                }
+            }
+        }
+
+        &.mkdf-vk-share {
+            background-color: #45668e;
+            color: #fff;
+        }
+
+        &:last-child {
+            margin: 0 0 3px;
+        }
+
+        a {
+            font-size: 12px;
+            vertical-align: middle;
+            color: #fff;
+        }
+    }
+}
+
+/* List type - end
+========================================================================== */
+
+/* Dropdown type - begin
+========================================================================== */
+
+$socialShareWidth: 88px;
+$socialShareHeight: 28px;
+
+.mkdf-social-share-holder.mkdf-dropdown {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    .mkdf-social-share-dropdown-opener {
+        display: block;
+        color: $default-text-color;
+        padding-left: 20px;
+
+        .mkdf-social-share-title {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 10px;
+        }
+
+        .social_share {
+            font-size: 18px;
+            color: $first-main-color;
+        }
+
+        &:hover {
+            color: $first-main-color;
+
+            .social_share {
+                color: inherit;
+            }
+        }
+
+        @include ipad-portrait{
+            padding-left: 0;
+            padding-right: 20px;
+        }
+
+    }
+
+    .mkdf-social-share-dropdown {
+        position: relative;
+        visibility: hidden;
+        z-index: 950;
+        right: 0;
+        top: -27px;
+
+        ul {
+            position: relative;
+            display: block;
+            z-index: 990;
+            margin: 0;
+            padding: 0 !important;
+        }
+
+        ul li {
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            visibility: hidden;
+            position: absolute;
+            text-align: center;
+            opacity: 0;
+            margin: 0;
+            padding: 0;
+            border-radius: 50%;
+            background-color: $first-main-color;
+            font-size: 12px;
+            color: #FFF;
+            box-sizing: border-box;
+            @include mkdfTransition(all .2s ease-out);
+	
+	        &:not(:first-child) {
+		        border-top: none;
+	        }
+
+            &.mkdf-facebook-share {
+                background-color: #3b5998;
+            }
+
+            &.mkdf-twitter-share {
+                background-color: #00aced;
+            }
+
+            &.mkdf-google_plus-share {
+                background-color: #dd4b39;
+            }
+
+            &.mkdf-linkedin-share {
+                background-color: #007bb5;
+            }
+
+            &.mkdf-tumblr-share {
+                background-color: #32506d;
+            }
+
+            &.mkdf-pinterest-share {
+                background-color: #cb2027;
+            }
+
+            &.mkdf-vk-share {
+                background-color: #45668e;
+            }
+            
+            * {
+                display: block;
+                line-height: inherit;
+            }
+
+            a {
+                color: inherit !important;
+            }
+
+            @for $i from 1 through 7 {
+                &:nth-child(#{$i}) {
+                    left: #{-$i*(($socialShareHeight))};
+                }
+            }
+
+            &:nth-child(1){
+                left: -$socialShareHeight;
+                margin-left: 10px;
+
+                @include ipad-portrait{
+                    left: auto;
+                    right: -$socialShareHeight;
+                    margin: 0 10px 0 0;
+                }
+
+            }
+            &:nth-child(2){
+                left: -$socialShareHeight*2;
+                margin-left: 5px;
+
+                @include ipad-portrait{
+                    left: auto;
+                    right: -$socialShareHeight*2;
+                    margin: 0 5px 0 0;
+                }
+
+            }
+            &:nth-child(3){
+                left: -$socialShareHeight*3;
+                margin-left: 0;
+
+                @include ipad-portrait{
+                    left: auto;
+                    right: -$socialShareHeight*3;
+                    margin-right: 0;
+                }
+
+            }
+
+        }
+    }
+}
+
+.mkdf-social-share-holder.mkdf-dropdown:hover {
+
+    .mkdf-social-share-dropdown ul li {
+        opacity: 1;
+        visibility: visible;
+        cursor: pointer;
+    }
+
+    .mkdf-social-share-dropdown ul li {
+
+        /* opacity and visibility need to be different, but not background-color */
+        @for $i from 2 through 7 {
+            &:nth-child(#{$i}) {
+                @include mkdfTransition( opacity .2s ease-out #{($i)/10+s}, visibility .2s ease-out #{($i)/10+s}, background-color .2s ease-out);
+            }
+        }
+    }
+}
+
+/* Dropdown type - end
+========================================================================== */
+
+/* ==========================================================================
+   Social Share shortcode style - end
+   ========================================================================== */

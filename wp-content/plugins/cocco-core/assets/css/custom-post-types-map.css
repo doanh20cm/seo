@@ -1,0 +1,239 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+@-webkit-keyframes mkdfborderdance {
+  0% {
+    background-position: 0% 0px, 100% 100%, 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+@keyframes mkdfborderdance {
+  0% {
+    background-position: 0% 0px, 100% 100%, 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+/* ==========================================================================
+   Custom Post Types styles
+   ========================================================================== */
+/* ==========================================================================
+   Testimonials boxed style - begin
+   ========================================================================== */
+.mkdf-testimonials-holder.mkdf-testimonials-boxed {
+  margin: 0 -20px;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-boxed .mkdf-testimonials {
+  margin: 0;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-boxed .owl-item {
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-boxed .owl-item:nth-child(3n+2) .mkdf-testimonial-text {
+  background-color: #9ad8d3;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-boxed .owl-item:nth-child(3n+2) .mkdf-testimonial-triangle {
+  color: #9ad8d3;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-boxed .owl-item:nth-child(3n+3) .mkdf-testimonial-text {
+  background-color: #dce086;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-boxed .owl-item:nth-child(3n+3) .mkdf-testimonial-triangle {
+  color: #dce086;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-boxed .owl-item .mkdf-testimonial-text {
+  margin: 0;
+  padding: 45px 35px;
+  background-color: #ff6f96;
+  color: #FFF;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-boxed .owl-item .mkdf-testimonial-triangle {
+  position: relative;
+  display: inline-block;
+  float: right;
+  color: #ff6f96;
+  top: -7px;
+  right: 45px;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-boxed .mkdf-testimonials-author-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  padding: 28px 32px 0;
+  width: auto;
+  display: inline-block;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-boxed .mkdf-testimonials-author-holder .mkdf-testimonial-image {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-boxed .mkdf-testimonials-author-holder .mkdf-testimonial-author {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 0 20px;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-boxed .mkdf-testimonials-icon {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   Testimonials boxed style - end
+   ========================================================================== */
+/* ==========================================================================
+   Testimonials standard style - begin
+   ========================================================================== */
+.mkdf-testimonials-holder.mkdf-testimonials-standard {
+  text-align: center;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-standard .mkdf-testimonial-image {
+  margin: 0 0 15px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-standard .mkdf-testimonial-image img {
+  display: block;
+  margin: 0 auto;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-standard .mkdf-testimonial-title {
+  margin: 0;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-standard .mkdf-testimonial-text {
+  margin: 13px 0 0;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-standard .mkdf-testimonial-author {
+  margin: 19px 0 4px;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-standard .mkdf-testimonial-author .mkdf-testimonials-author-job {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  line-height: 26px;
+  color: #8f9093;
+  letter-spacing: 0;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-standard .mkdf-testimonials {
+  padding: 0 100px;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-standard .mkdf-owl-slider .owl-nav .owl-prev {
+  left: 0;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-standard .mkdf-owl-slider .owl-nav .owl-next {
+  right: 0;
+}
+
+/* ==========================================================================
+   Testimonials standard style - end
+   ========================================================================== */
+/* ==========================================================================
+   Testimonials shortcode style - begin
+   ========================================================================== */
+.mkdf-testimonials-holder {
+  padding: 50px 0;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  /* Light/Dark styles */
+}
+
+.mkdf-testimonials-holder .mkdf-testimonials,
+.mkdf-testimonials-holder .mkdf-testimonial-content,
+.mkdf-testimonials-holder .mkdf-testimonial-text-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.mkdf-testimonials-holder .mkdf-testimonials {
+  box-sizing: border-box;
+}
+
+.mkdf-testimonials-holder .mkdf-testimonials .mkdf-testimonial-author .mkdf-testimonials-author-name {
+  margin: 0;
+}
+
+.mkdf-testimonials-holder .mkdf-testimonials .mkdf-testimonial-text {
+  font-size: 19px;
+  line-height: 1.78em;
+}
+
+.mkdf-testimonials-holder .mkdf-testimonial-image img {
+  width: auto !important;
+  border-radius: 5em;
+}
+
+.mkdf-testimonials-holder .mkdf-testimonial-quote-image {
+  color: #ff6f96;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-light .mkdf-testimonial-title,
+.mkdf-testimonials-holder.mkdf-testimonials-light .mkdf-testimonial-text,
+.mkdf-testimonials-holder.mkdf-testimonials-light .mkdf-testimonial-author,
+.mkdf-testimonials-holder.mkdf-testimonials-light .mkdf-testimonials-author-name,
+.mkdf-testimonials-holder.mkdf-testimonials-light .mkdf-testimonials-author-job {
+  color: #fff;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-light .owl-dots .owl-dot span {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-light .owl-dots .owl-dot:hover span, .mkdf-testimonials-holder.mkdf-testimonials-light .owl-dots .owl-dot.active span {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-light .owl-nav .owl-prev,
+.mkdf-testimonials-holder.mkdf-testimonials-light .owl-nav .owl-next {
+  color: #FFF;
+}
+
+.mkdf-testimonials-holder.mkdf-testimonials-light .owl-nav .owl-prev:hover,
+.mkdf-testimonials-holder.mkdf-testimonials-light .owl-nav .owl-next:hover {
+  color: #ff6f96;
+}
+
+/* ==========================================================================
+   Testimonials shortcode style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../../../../plugins/cocco-core/assets/css/custom-post-types-map.css.map */

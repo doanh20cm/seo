@@ -1,0 +1,50 @@
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+@-webkit-keyframes mkdfborderdance {
+  0% {
+    background-position: 0% 0px, 100% 100%, 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+@keyframes mkdfborderdance {
+  0% {
+    background-position: 0% 0px, 100% 100%, 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+.widget.mkdf-vertical-separator-widget {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 !important;
+  /* overwrite default widget margin */
+  font-size: 0;
+}
+
+.widget.mkdf-vertical-separator-widget.mkdf-vertical-separator-full-height {
+  height: 100%;
+}
+
+.widget.mkdf-vertical-separator-widget .mkdf-vsw-height-holder {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.widget.mkdf-vertical-separator-widget .mkdf-vsw {
+  display: inline-block;
+  vertical-align: middle;
+  border-left: 1px solid currentColor;
+  height: 20px;
+  width: 1px;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=vertical-separator-widget-map.css.map */

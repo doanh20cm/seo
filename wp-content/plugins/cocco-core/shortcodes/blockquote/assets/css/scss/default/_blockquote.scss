@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Blockquote shortcode style - begin
+   ========================================================================== */
+
+.mkdf-blockquote-shortcode {
+    @include mkdfRelativeHolderLayout();
+	.mkdf-icon-quotations-holder{
+		display: inline-block;
+		vertical-align: middle;
+		svg{
+			width: 31px;
+			height: 28px;
+		}
+	}
+	.mkdf-blockquote-text{
+		padding: 0 0 0 19px;
+	}
+}
+/* ==========================================================================
+   Blockquote shortcode style - end
+   ========================================================================== */

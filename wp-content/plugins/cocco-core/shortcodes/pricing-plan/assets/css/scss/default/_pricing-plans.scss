@@ -1,0 +1,157 @@
+/* ==========================================================================
+   Pricing Plans shortcode style - begin
+   ========================================================================== */
+
+.mkdf-pricing-plans {
+	@include mkdfRelativeHolderLayout();
+	clear: both;
+
+	.mkdf-pp-wrapper {
+		position: relative;
+	}
+
+	$pricing_plan_columns: ('mkdf-two-columns', 'mkdf-three-columns', 'mkdf-four-columns', 'mkdf-five-columns');
+	@for $i from 0 to length($pricing_plan_columns) {
+		&.#{nth($pricing_plan_columns, $i+1)} {
+			$column_width: 100%/($i+2);
+
+			.mkdf-price-plan {
+				width: $column_width;
+			}
+		}
+	}
+}
+
+.mkdf-price-plan {
+	position: relative;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	float: left;
+	box-sizing: border-box;
+
+	.mkdf-pp-inner {
+		@include mkdfRelativeHolderLayout();
+		background-color: #ff759a;
+		color: #FFF;
+		border-radius: 5px;
+		box-sizing: border-box;
+
+		.mkdf-pp-content-top{
+			text-align: center;
+
+			.mkdf-pp-title-period{
+				color: #FFF;
+				margin: 58px 0 22px;
+			}
+
+			.mkdf-pp-text{
+				font-size: 19px;
+				line-height: 1.79em;
+				padding: 0 33px;
+			}
+		}
+
+		.mkdf-pp-content-bottom{
+			display: table;
+			background-color: rgba(0, 0, 0, 0.03);
+			margin: 50px 0 0;
+
+			.mkdf-pp-title{
+				display: table-cell;
+				width: 99%;
+				vertical-align: middle;
+			}
+
+			.mkdf-pp-price-holder{
+				display: table-cell;
+				width: 1%;
+				white-space: nowrap;
+				vertical-align: middle;
+				background-color: rgba(0, 0, 0, 0.08);
+				padding: 0 26px 0 33px;
+			}
+
+			.mkdf-pp-button{
+
+				.mkdf-btn-icon-holder{
+					width: 30px;
+					line-height: 0.8em;
+
+					&:after{
+						display: none;
+					}
+				}
+
+				.mkdf-btn{
+					font-size: 24px;
+					padding: 30px 0 !important;
+					width: 100%;
+					text-align: center;
+
+					&.mkdf-btn-simple{
+						color: #FFF;
+
+						&:hover{
+							color: #FFF;
+						}
+
+						&.mkdf-btn-icon-animate:hover{
+							>i,
+							>span:not(.mkdf-btn-text){
+								@include mkdfTransform(translateX(6px));
+							}
+						}
+
+					}
+				}
+
+			}
+		}
+
+		&.mkdf-pp-title-holder {
+			position: relative;
+			color: #fff;
+			font-size: 18px;
+			line-height: 26px;
+			letter-spacing: 1px;
+			padding: 55px 15px 55px;
+			background-color: $first-main-color;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+
+			.mkdf-pp-value,
+			.mkdf-pp-price,
+			.mkdf-pp-mark  {
+				color: #fff;
+			}
+		}
+
+		.mkdf-pp-value {
+			position: relative;
+			font-family: $default-heading-font;
+			font-size: 30px;
+			line-height: 1.2em;
+		}
+
+		.mkdf-pp-price {
+			position: relative;
+			display: inline-block;
+			left: -5px;
+			font-family: $default-heading-font;
+			font-size: 30px;
+			line-height: 1.2em;
+		}
+
+		.mkdf-pp-mark {
+			position: relative;
+			display: block;
+			margin: 5px 0 0;
+			font-size: 16px;
+		}
+	}
+}
+/* ==========================================================================
+   Pricing Plans shortcode style - end
+   ========================================================================== */

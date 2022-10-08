@@ -1,0 +1,110 @@
+/* ==========================================================================
+   Social Icon widget style - begin
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+@-webkit-keyframes mkdfborderdance {
+  0% {
+    background-position: 0% 0px, 100% 100%, 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+@keyframes mkdfborderdance {
+  0% {
+    background-position: 0% 0px, 100% 100%, 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+a.mkdf-social-icon-widget-holder {
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  color: #fff;
+  background-color: transparent;
+  text-align: center;
+  overflow: hidden;
+}
+
+a.mkdf-social-icon-widget-holder.mkdf-social-icon-circle {
+  border-radius: 50%;
+}
+
+a.mkdf-social-icon-widget-holder .mkdf-social-icon-widget {
+  color: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+}
+
+a.mkdf-social-icon-widget-holder.mkdf-icon-has-hover .mkdf-social-icon-widget {
+  display: block;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  -moz-transition: -moz-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+}
+
+a.mkdf-social-icon-widget-holder.mkdf-icon-has-hover .mkdf-social-icon-widget.mkdf-social-icon-widget-hover {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(0, 100%, 0);
+  -moz-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+
+a.mkdf-social-icon-widget-holder.mkdf-icon-has-hover:hover .mkdf-social-icon-widget.mkdf-social-icon-widget-initial {
+  -webkit-transform: translate3d(0, -100%, 0);
+  -moz-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+
+a.mkdf-social-icon-widget-holder.mkdf-icon-has-hover:hover .mkdf-social-icon-widget.mkdf-social-icon-widget-hover {
+  -webkit-transform: translate3d(0, 0%, 0);
+  -moz-transform: translate3d(0, 0%, 0);
+  transform: translate3d(0, 0%, 0);
+}
+
+.mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-social-icon-widget-holder {
+  color: #333 !important;
+}
+
+.mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-social-icon-widget-holder:hover {
+  color: rgba(51, 51, 51, 0.8) !important;
+}
+
+.mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-social-icon-widget-holder.mkdf-social-icon-circle, .mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-social-icon-widget-holder.mkdf-social-icon-square {
+  color: #fff !important;
+  background-color: #333 !important;
+}
+
+.mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-social-icon-widget-holder {
+  color: #fff !important;
+}
+
+.mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-social-icon-widget-holder:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-social-icon-widget-holder.mkdf-social-icon-circle, .mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-social-icon-widget-holder.mkdf-social-icon-square {
+  color: #333 !important;
+  background-color: #fff !important;
+}
+
+/* ==========================================================================
+   Social Icon widget style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=social-icon-widget-map.css.map */

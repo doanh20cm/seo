@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Process shortcode responsive style - begin
+   ========================================================================== */
+
+.mkdf-process-holder {
+
+	@include ipad-landscape {
+		$process_item_columns: ('mkdf-four-columns', 'mkdf-five-columns');
+		@for $i from 0 to length($process_item_columns) {
+			&.#{nth($process_item_columns, $i+1)} {
+				$column_width: 100%/2;
+
+				.mkdf-process-item {
+					width: $column_width;
+
+					@media only screen and (min-width: $phone-landscape-plus-pixel) {
+
+						&:nth-child(2n+1) {
+							clear: both;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@include ipad-portrait {
+		.mkdf-process-inner {
+			@include mkdfRelativeHolderLayout();
+			padding: 0;
+			margin: 0;
+			text-align: center;
+			box-sizing: border-box;
+			.mkdf-process-item {
+				width: 100%;
+				float: none;
+				padding: 0;
+				text-align: inherit;
+			}
+		}
+	}
+	
+	@include phone-landscape {
+		.mkdf-process-inner {
+			@include mkdfRelativeHolderLayout();
+			padding: 0;
+			margin: 0;
+			text-align: center;
+			box-sizing: border-box;
+
+			.mkdf-process-item {
+				width: 100%;
+				float: none;
+				padding: 0;
+				text-align: inherit;
+			}
+		}
+	}
+	
+	@include phone-portrait {
+
+		.mkdf-process-inner {
+			@include mkdfRelativeHolderLayout();
+			padding: 0;
+			margin: 0;
+			text-align: center;
+			box-sizing: border-box;
+			.mkdf-process-item {
+				width: 100%;
+				float: none;
+				padding: 0;
+				text-align: inherit;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Process shortcode responsive style - end
+   ========================================================================== */

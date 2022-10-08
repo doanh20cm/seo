@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Pricing Plans shortcode responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape-medium {
+	
+	.mkdf-pricing-plans {
+		
+		$pricing_plan_columns: ('mkdf-four-columns', 'mkdf-five-columns');
+		@for $i from 0 to length($pricing_plan_columns) {
+			&.#{nth($pricing_plan_columns, $i+1)} {
+				$column_width: 100%/2;
+				
+				.mkdf-price-plan {
+					width: $column_width;
+					
+					@media only screen and (min-width: $phone-landscape-plus-pixel) {
+						
+						&:nth-child(2n+1) {
+							clear: both;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include ipad-landscape {
+	
+	.mkdf-pricing-plans {
+
+		$pricing_plan_columns: ('mkdf-three-columns');
+		@for $i from 0 to length($pricing_plan_columns) {
+			&.#{nth($pricing_plan_columns, $i+1)} {
+				
+				.mkdf-price-plan {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@include phone-landscape {
+	
+	.mkdf-pricing-plans {
+		
+		.mkdf-price-plan {
+			width: 100% !important;
+			.mkdf-pp-content-bottom{
+				display: block;
+				.mkdf-pp-button{
+					text-align: center;
+				}
+				.mkdf-pp-price-holder{
+					padding: 15px 0;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Pricing Plans shortcode responsive style - end
+   ========================================================================== */

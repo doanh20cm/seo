@@ -1,0 +1,267 @@
+/* ==========================================================================
+   Popup styles - begin
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+@-webkit-keyframes mkdfborderdance {
+  0% {
+    background-position: 0% 0px, 100% 100%, 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+@keyframes mkdfborderdance {
+  0% {
+    background-position: 0% 0px, 100% 100%, 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
+}
+
+/* ==========================================================================
+# Pop-up style - begin
+========================================================================== */
+.mkdf-popup-holder {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 115;
+  visibility: hidden;
+  -webkit-transition: opacity 0.2s ease-out 0.1s, visibility 0s 0.4s;
+  -moz-transition: opacity 0.2s ease-out 0.1s, visibility 0s 0.4s;
+  transition: opacity 0.2s ease-out 0.1s, visibility 0s 0.4s;
+}
+
+.mkdf-popup-holder .mkdf-popup-shader {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 110%;
+  height: 130%;
+  z-index: 1;
+  -webkit-transform-style: flat;
+  transform-style: flat;
+  backface-visibility: hidden;
+  background-color: rgba(12, 12, 18, 0.65);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.mkdf-popup-holder .mkdf-popup-table {
+  display: table;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 9;
+  background-color: rgba(12, 12, 18, 0.65);
+}
+
+.mkdf-popup-holder .mkdf-popup-table-cell {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.mkdf-popup-holder .mkdf-popup-inner {
+  display: table;
+  margin: 0 auto;
+  width: 57%;
+  height: 500px;
+  max-height: 90%;
+  box-sizing: border-box;
+  opacity: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-transition: transform 0.3s cubic-bezier(0.06, 0.47, 0.38, 0.99), opacity 0.3s cubic-bezier(0.06, 0.47, 0.38, 0.99);
+  -moz-transition: transform 0.3s cubic-bezier(0.06, 0.47, 0.38, 0.99), opacity 0.3s cubic-bezier(0.06, 0.47, 0.38, 0.99);
+  transition: transform 0.3s cubic-bezier(0.06, 0.47, 0.38, 0.99), opacity 0.3s cubic-bezier(0.06, 0.47, 0.38, 0.99);
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  transform: scale(0.6);
+}
+
+@media only screen and (max-width: 1440px) {
+  .mkdf-popup-holder .mkdf-popup-inner {
+    width: 70%;
+  }
+}
+
+.mkdf-popup-holder .mkdf-popup-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: block;
+}
+
+.mkdf-popup-holder .mkdf-popup-close:hover {
+  color: #8f9093;
+}
+
+.mkdf-popup-holder .mkdf-popup-close span {
+  font-size: 30px;
+  color: #ff6f96;
+}
+
+.mkdf-popup-holder .mkdf-popup-close span:hover {
+  color: #32355d;
+}
+
+.mkdf-popup-holder .mkdf-popup-content-container {
+  background: #fff;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px 40px;
+  text-align: left;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.mkdf-popup-holder .mkdf-popup-content-container .wpcf7 .wpcf7-form-control.wpcf7-text,
+.mkdf-popup-holder .mkdf-popup-content-container .wpcf7 input.wpcf7-form-control.wpcf7-submit {
+  border-radius: 0;
+}
+
+.mkdf-popup-holder .mkdf-popup-content-container .wpcf7 input.wpcf7-form-control.wpcf7-submit {
+  font-size: 24px;
+  line-height: 26px;
+  padding: 16px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.mkdf-popup-holder .mkdf-popup-content-container .wpcf7 .wpcf7-form-control.wpcf7-text {
+  padding: 16px 24px;
+  border: 1px solid #f5f4f4;
+  background-color: #f8f8f8;
+  color: #8f9093;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  line-height: 26px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.mkdf-popup-holder .mkdf-popup-content-container .wpcf7 .ajax-loader {
+  display: none;
+}
+
+.mkdf-popup-holder .mkdf-popup-background {
+  display: table-cell;
+  width: 50%;
+  background-size: cover;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.mkdf-popup-holder .mkdf-popup-title-holder .mkdf-popup-title {
+  margin: 0;
+}
+
+.mkdf-popup-holder .mkdf-popup-subtitle {
+  margin: 0 0 47px;
+}
+
+.mkdf-popup-holder .wpcf7 {
+  position: relative;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.mkdf-popup-holder .mkdf-popup-prevent {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.mkdf-popup-holder .mkdf-popup-prevent-inner {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.mkdf-popup-holder .mkdf-popup-prevent-inner > * {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 1;
+}
+
+.mkdf-popup-holder .mkdf-popup-prevent-input {
+  margin: 1px 7px 0 0;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #f5f4f4;
+  background-color: #f8f8f8;
+  overflow: hidden;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.mkdf-popup-holder .mkdf-popup-prevent-input span {
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.1s ease;
+  -moz-transition: opacity 0.1s ease;
+  transition: opacity 0.1s ease;
+}
+
+.mkdf-popup-holder .mkdf-popup-prevent-input.mkdf-popup-prevent-clicked span {
+  opacity: 1;
+}
+
+.mkdf-popup-holder .mkdf-popup-prevent-input.mkdf-popup-prevent-clicked span {
+  color: #9ad8d3;
+  font-size: 16px;
+}
+
+.mkdf-popup-holder .mkdf-popup-prevent-label {
+  color: #32355d;
+  line-height: 20px;
+}
+
+/* Popup open/close style */
+.mkdf-popup-opened .mkdf-popup-holder {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.mkdf-popup-opened .mkdf-popup-holder .mkdf-popup-inner {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: transform 0.8s cubic-bezier(0.26, 0.63, 0, 0.96);
+  -moz-transition: transform 0.8s cubic-bezier(0.26, 0.63, 0, 0.96);
+  transition: transform 0.8s cubic-bezier(0.26, 0.63, 0, 0.96);
+}
+
+/* ==========================================================================
+# Pop-up style - end
+========================================================================== */
+/* ==========================================================================
+   Header styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=popup-map.css.map */
